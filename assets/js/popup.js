@@ -32,10 +32,6 @@
  
   // Call this on index.html
   window.PopupIndex = function () {
-    // (optional) show once per session on index
-    if (sessionStorage.getItem("ageGateShown_index") === "1") return;
-    sessionStorage.setItem("ageGateShown_index", "1");
- 
     const built = buildPopup();
     if (!built) return;
     const { bd, close } = built;
